@@ -19,14 +19,14 @@ const db = {};
 let sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USERNAME, process.env.DB_PASSWORD, {
   host: process.env.DB_HOST,
   dialect: 'mysql',
-  dialectOptions: {
-    multipleStatements: true
-  }
+  // dialectOptions: {
+  //   multipleStatements: true
+  // }
 });
   
-var sql_string = fs.readFileSync('./questions.sql', 'utf8');
+// var sql_string = fs.readFileSync('./questions.sql', 'utf8');
 
-sequelize.query(sql_string);
+// sequelize.query(sql_string);
 
 
 fs
